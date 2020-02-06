@@ -4,15 +4,16 @@
     top: 0;
     right: 0;
     z-index: 9999;
+    padding: 3rem 2rem;
+    padding-right: 0;
+    transition: all .4s ease-out;
 
     $self: &;
 
     &__top {
         display: flex;
-        padding: 3rem 0;
         align-items: center;
         justify-content: space-between;
-        transition: all .4s ease-out;
         
         @media screen and (max-width: $tablet-big) {
             padding: 1.8rem 0;
@@ -80,10 +81,9 @@
 
             > li {
                 position: relative;
-                z-index: 1;
                 display: block;
-                font-family: $font-family-tertiary;
-                font-size: 1.6rem;
+                z-index: 1;
+                font-size: 1.8rem;
                 margin-left: 3rem;
                 transition: all .3s ease-out;
                 border-bottom: 3px solid transparent;
@@ -92,10 +92,8 @@
 
                 a {
                     display: block;
-                    color: white;
                     padding: 1.2rem 0 1rem;
-                    letter-spacing: .1rem;
-                    text-transform: uppercase;
+                    color: $color-secondary;
 
                     i {
                         @media (max-width: $tablet-small) {
@@ -192,8 +190,36 @@
         }
     }
 
-    &__bookApoint {
-        padding: 0;
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        .userIcon {
+            padding: 1rem 2rem;
+        }
+
+        .btnCart {
+            display: flex;
+            align-items: center;
+            background: $color-secondary;
+
+            i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                width: 4rem;
+                height: 4rem;
+                background: $color-primary;
+            }
+
+            .text {
+                color: white;
+                padding: 0 1rem;
+            }
+        }
+
 
         @media (max-width: $tablet-small) {
             display: none;
@@ -201,11 +227,13 @@
     }
 
     &--sticky {
-        background: rgba(black, 0.85);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background: rgba(white, 0.97);
         box-shadow: 0 5px 5px 0 rgba(black, 0.09);
 
         #{$self}__top {
-            padding: 2rem 0;
+            padding: 0;
         }
     }
 }

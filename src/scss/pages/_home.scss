@@ -3,8 +3,8 @@
     z-index: 1;
     width: 100%;
     height: 100vh;
-    background: image('banner-img.jpg') center no-repeat;
-    background-size: cover;
+    background: image('home-bg.jpg') left top no-repeat $color-grey-light-1;
+    background-size: 100% auto;
 
     .container {
         display: flex;
