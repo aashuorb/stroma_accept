@@ -1,6 +1,10 @@
 .container {
-	width: 97.5%;
-	max-width: 142rem;
+	width: calc(100% - 30px);
+	max-width: 144rem;
+
+	@media (max-width: $mobile-big) {
+		width: 100%;
+	}
 
 	&.extra-padding {
 		padding: 0 8rem;

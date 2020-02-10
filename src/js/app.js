@@ -122,3 +122,20 @@ var app = {
 $(document).ready(function() {
     app.init();
 });
+
+$(document).ready(function () {
+    $(".main-slider").slick({
+        infinite: true,
+        dots: true,
+        fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        speed: 500,
+        autoplaySpeed: 2500
+    });
+
+    $(".wishlist-button").click(function () {
+        $(this).children("i").toggleClass("far fas")
+    });
+});
