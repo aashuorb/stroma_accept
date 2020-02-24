@@ -147,6 +147,10 @@
                     line-height: 34px;
                     letter-spacing: 0;
                     color: $color-secondary;
+
+                    @media (max-width: $mobile-big) {
+                        font-size: 20px;
+                    }
                 }
 
                 .contactus {
